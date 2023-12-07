@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>friends</title>
+    <style>
+        * {
+            margin: 0px 0px;
+        }
+
+        section {
+            background-color: #439e31bf;
+            width: 100%;
+            height: 563px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        h1 {
+            color: white;
+            margin-left: 32px;
+        }
+
+        h2 {
+            margin: 20px 0px;
+            font-weight: bold;
+            color: darkgreen;
+        }
+
+        nav {
+            width: 100%;
+            height: 40px;
+            background-color: gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-right {
+            margin-right: 32px;
+        }
+
+        .nav-right button {
+            background-color: lightgray;
+            padding: 6px 14px;
+            border-radius: 5px;
+        }
+
+        .nav-right button {
+            padding: 6px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .requests {
+            margin: 30px 100px 0px 0px;
+        }
+
+        ul {
+            width: 100%;
+            height: 180px;
+            margin-left: -39px;
+        }
+
+        ul li {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            margin: 0px 6px;
+            padding: 3px;
+            width: 54px;
+            height: 27px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>UserName</h1>
+        <div id="nav-right" style="margin-right: 32px;">
+            <button style="background-color: darkgreen;
+            color: white;">Friends</button>
+            <button><a href="login.html">Logout</a></button>
+        </div>
+    </nav>
+    <section>
+        <div id="requests">
+            <h2>Friend Requests</h2>
+            <ul type="none">
+                <li>User_5
+                    <button>Yes</button>
+                    <button>No</button>
+                </li>
+                <li>User_8
+                    <button>Yes</button>
+                    <button>No</button>
+                </li>
+                <li>User_13
+                    <button>Yes</button>
+                    <button>No</button>
+                </li>
+            </ul>
+        </div>
+        <div id="friends">
+            <h2>Friends</h2>
+            <ul type="none">
+                <li>User_2</li>
+                <li>User_9</li>
+                <li>User_11</li>
+                <li>User_15</li>
+            </ul>
+        </div>
+        <div id="users">
+            <h2>All Users</h2>
+            <ul type="none">
+                <li>User_1<button>+</button></li>
+                <li>User_3<button>+</button></li>
+                <li>User_4<button>+</button></li>
+                <li>User_6<button>+</button></li>
+                <li>User_7<button>+</button></li>
+                <li>User_10<button>+</button></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

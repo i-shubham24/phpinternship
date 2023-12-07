@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        * {
+            margin: 0px 0px;
+        }
+
+        section {
+            width: 100%;
+            height: 587px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            width: 100%;
+            height: 40px;
+            background-color: gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-right {
+            margin-right: 32px;
+        }
+
+        .nav-right button {
+            background-color: lightgray;
+            padding: 6px 14px;
+            border-radius: 5px;
+        }
+
+        section .updates {
+            width: 100%;
+            height: 900px;
+            background-color: #439e31bf;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .upd-left {
+            width: 50%;
+            padding: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            font-weight: bold;
+            margin-left: 32px;
+        }
+
+        h2 {
+            margin: 15px 0px 15px 0px;
+        }
+
+        .heading {
+            color: darkgreen;
+            font-weight: bold;
+            margin: 18px 0px;
+        }
+
+        .upd-right {
+            width: 50%;
+            padding: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-area {
+            width: 99%;
+            height: 130px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .post-area::placeholder {
+            position: relative;
+            top: 100px;
+        }
+
+        .post-btn {
+            width: 120px;
+            height: 35px;
+            position: relative;
+            left: 340px;
+            margin: 10px 0px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <h1>UserName</h1>
+            <div id="nav-right" style="margin-right: 32px;">
+                <button style="padding: 6px 14px;
+                border-radius: 5px; cursor: pointer;">Friends</button>
+                <button style="padding: 6px 14px;
+                border-radius: 5px; cursor: pointer;
+                text-decoration: none;
+                color: black;"><a href="login.html">Logout</a></button>
+            </div>
+        </nav>
+        <div id="updates" style=" width: 100%;
+    height: 900px;
+    background-color: #439e31bf;
+    display: flex;
+    justify-content: center;
+    font-size: larger;">
+            <div id="upd-left" style="width: 50%;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px 0px 30px;
+        overflow: hidden;">
+                <h2>Updates</h2><br>
+                <i class="heading">
+                    Update from friend1
+                </i>
+                <h3>Congratulations to all the people who cleared round 1</h3>
+                <i class="heading">
+                    Update from friend2
+                </i>
+                <h3>Hello friends,all the best for your round 2 of the selection process.
+                </h3>
+            </div>
+            <div id="upd-right" style="width: 50%;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 30px 0px 150px;
+        overflow: hidden;">
+                <h2>Post a new update</h2>
+                <input type="textarea" id="post-area" placeholder="type your status update here..." style=" width: 99%;
+                height: 130px;
+                border: none;
+                border-radius: 5px;">
+                <button id="post-btn" style="width: 120px;
+                height: 35px;
+                position: relative;
+                left: 405px;
+                margin: 10px 0px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;">POST</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

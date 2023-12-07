@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/signup form</title>
+    <style>
+        *{
+            margin: 0px 0px;
+        }
+        section{
+            background-color: #439e31bf;
+            width: 100%;
+            height: 587px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 19%;
+            height: 190px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form input{
+            display: flex;
+            background-color: white;
+            border: 0px;
+            width: 100%;
+            height: 25px;
+            padding: 5px 5px;
+            margin: 5px 0px;
+            outline: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .buttons{
+            width: 100%;
+            height: 20px;
+        }
+        .buttons{
+            width: 100px;
+            height: 30px;
+        }
+        .register{
+            width: 100px;
+            margin: 10px 7px;
+            padding: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .signup{
+            width: 100px;
+            margin: 10px 7px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button a{
+            color: white;
+            text-decoration: none;
+        }
+
+        input .formerror{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <form action="register.php" method="post" name="myForm" onsubmit="return validateForm()">
+        <input type="text" name="name" id="name" placeholder="username" required><span id="formerror"><b>*this is an error</b></span>
+        <input type="text" name="password" id="password" placeholder="password" required><span id="formerror"><b>*this is an error</b></span>
+        <div id="buttons">
+        <button class="register" name="register" onclick="check"><a href="userprofile.html">Register</a></button>
+        <button class="signup" name="signup">sign up</button>
+    </div>
+    </form>
+</section>
+<script>
+    function check(){
+        let val1=document.getElementById("name").value;
+        let val2=document.getElementById("password").value;
+        if(val1!="" && val!="")
+        {
+            window.location.href="D:\Assignment\userprofile.html";
+        }
+    }
+    function clearErrors(){
+        errors=document.getElementById('formerror');
+        for(let item of errors)
+        {
+            itme.innerHTML="";
+        }
+    }
+    function seterror(id,error){
+        Element=document.getElementById(id);
+        element.getElementByClassName('formerror')[0].innerHTML=error;
+    }
+    function validateForm(){
+        var name=document.forms['myForm']['name'].value;
+        if(name.length<5){
+            seterror("name","length of name is too short");
+            returnval=false;
+        }
+        if(name.length==0){
+            seterror("name","length of name cannot be zero");
+            returnval=false;
+        }
+        var password=document.forms['myForm']['password'].value;
+        if(password.length=6){
+            seterror("password","password should be atleast 6 characters long");
+            returnval=false;
+        }
+    }
+    return returnval;
+</script>
+</body>
+</html>
